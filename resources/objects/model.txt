@@ -1,0 +1,14 @@
+name;[symbolic];value1,value2,value3
+name;[numeric];min;max
+
+names:
+elevation;numeric;
+height;numeric;
+width;numeric;
+length;numeric;
+velocity;numeric;
+wavelength;symbolic;
+type;symbolic;
+identification;symbolic;
+waveformCaracterisation;symbolic;
+radarCrossSection;numeric;

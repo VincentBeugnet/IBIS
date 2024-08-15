@@ -1,0 +1,6 @@
+elevation;numeric;1150;1250
+height;numeric;0.45;0.55
+width;numeric;1.1;1.3
+length;numeric;1.4;1.6
+velocity;numeric;40.0;50.0
+radarCrossSection;numeric;0.02;0.03

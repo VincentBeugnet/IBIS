@@ -1,0 +1,7 @@
+elevation;numeric;0;0
+height;numeric;1.7;1.8
+width;numeric;0.40;0.50
+length;numeric;0.3;0.4
+velocity;numeric;0.0;3.0
+wavelength;symbolic;1500,1800,1900,1920,2100,2400,5000,700,800,850,900
+radarCrossSection;numeric;1.0;1.2

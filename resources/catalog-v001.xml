@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="urn:absolute:/ontologies/sensor-network" uri="sensor-network.owl"/>
+    <uri id="Imports Wizard Entry" name="urn:absolute:/ontologies/sensor-network" uri="sensor-network.owl"/>
+    <uri id="Imports Wizard Entry" name="urn:absolute:/ontologies/sensor-network" uri="sensor-network.owl"/>
+    <uri id="Imports Wizard Entry" name="urn:absolute:/ontologies/objects" uri="objects.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="http://cohse.semanticweb.org/ontologies/people" uri="examples/people+pets.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="http://www.co-ode.org/ontologies/galen" uri="examples/simple-galen.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="urn:absolute:/ontologies/missions" uri="missions.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="duplicate:urn:absolute:/ontologies/objects" uri="objects%20-%20160.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="duplicate:urn:absolute:/ontologies/objects" uri="objects%20-%2020.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="duplicate:urn:absolute:/ontologies/objects" uri="objects%20-%2040.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="duplicate:urn:absolute:/ontologies/objects" uri="objects%20-%2080.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="duplicate:urn:absolute:/ontologies/objects" uri="objects.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1723679610389" name="urn:absolute:/ontologies/sensor-network" uri="sensor-network.owl"/>
+    </group>
+</catalog>

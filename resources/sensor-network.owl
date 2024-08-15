@@ -1,0 +1,1865 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="urn:absolute:/ontologies/sensor-network"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="urn:absolute:/ontologies/sensor-network"
+     versionIRI="urn:absolute:/ontologies/sensor-network">
+    <Prefix name="" IRI="urn:absolute:/ontologies/sensor-network"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">First version of the sensor network ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="fr">Première version de l&apos;ontologie réseau de capteurs</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Condition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensorMode"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAcquisitionRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCondition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEmissionRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMeasurementRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#observedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#observes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesSensor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#accuracy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#acquisitionTime"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dimension"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#distance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#elevation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#height"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#identification"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isEvolutive"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#latitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#longitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxDistance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxElevation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxLatitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxLongitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxRadarCrossSection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxVelocity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maxWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minDistance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minElevation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minHeight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minLatitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minLength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minLongitude"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minRadarCrossSection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minVelocity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#minWidth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#radarCrossSection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#velocity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#waveformCharacterisation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#wavelength"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#width"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#altimeterRadarMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#altimeterRadarModeElevation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#altitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dimension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#distance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dopplerRadarMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dopplerRadarModeLatitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dopplerRadarModeLongitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dopplerRadarModeVelocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#elevation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#geolocationMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#geolocationModeLatitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#geolocationModeLongitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#geolocationModeVelocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#georeferencedImagingModeLatitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#georeferencedImagingModeLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#georeferencedImagingModeLongitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#georeferencedImagingModeWidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#height"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hyperspectralAnalysisMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeWaveformCharacterisation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeWavelength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#identification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#iffMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#iffModeIdentification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarModeRadarCrossSection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#latitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#length"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lidarProfilingMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lidarProfilingModeElevation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lidarProfilingModeHeight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#longitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#objectClassificationMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#objectClassificationModeType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#objectClassificationModeWavelength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#observationAndMarkingMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#observationAndMarkingModeLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#observationAndMarkingModeType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#observationAndMarkingModeWidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#radarCrossSection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sarImagingMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sarImagingModeLatitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sarImagingModeLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sarImagingModeLongitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sarImagingModeWidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stereoscopicImagingModeHeight"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stereoscopicImagingModeLatitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stereoscopicImagingModeLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stereoscopicImagingModeLongitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stereoscopicImagingModeWidth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#targetTrackingMode"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#targetTrackingModeLatitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#targetTrackingModeLongitude"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#targetTrackingModeVelocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#type"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#velocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#waveformCharacterisation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#wavelength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#width"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#acronym"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#symbol"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#unit"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Attribute"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#isEvolutive"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorAttribute"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasAttribute"/>
+            <Class IRI="#Attribute"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorAttribute"/>
+        <DataMaxCardinality cardinality="1">
+            <DataProperty IRI="#accuracy"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensorMode"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#observes"/>
+            <Class IRI="#SensorAttribute"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#altimeterRadarMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#altimeterRadarModeElevation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#altitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#dimension"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#distance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#dopplerRadarMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#dopplerRadarModeLatitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#dopplerRadarModeLongitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#dopplerRadarModeVelocity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#elevation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#geolocationMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#geolocationModeLatitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#geolocationModeLongitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#geolocationModeVelocity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLatitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLongitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#georeferencedImagingModeWidth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#height"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeWaveformCharacterisation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeWavelength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#identification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#iffMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#iffModeIdentification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarModeRadarCrossSection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#latitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#length"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#lidarProfilingMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#lidarProfilingModeElevation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#lidarProfilingModeHeight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#longitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#objectClassificationMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#objectClassificationModeType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#objectClassificationModeWavelength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#observationAndMarkingMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#observationAndMarkingModeLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#observationAndMarkingModeType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#observationAndMarkingModeWidth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#radarCrossSection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#sarImagingMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#sarImagingModeLatitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#sarImagingModeLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#sarImagingModeLongitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#sarImagingModeWidth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeHeight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLatitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLongitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeWidth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorMode"/>
+        <NamedIndividual IRI="#targetTrackingMode"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#targetTrackingModeLatitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#targetTrackingModeLongitude"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SensorAttribute"/>
+        <NamedIndividual IRI="#targetTrackingModeVelocity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#type"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#velocity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#waveformCharacterisation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#wavelength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attribute"/>
+        <NamedIndividual IRI="#width"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#altimeterRadarMode"/>
+        <NamedIndividual IRI="#altimeterRadarModeElevation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#altimeterRadarModeElevation"/>
+        <NamedIndividual IRI="#elevation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#dopplerRadarMode"/>
+        <NamedIndividual IRI="#dopplerRadarModeLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#dopplerRadarMode"/>
+        <NamedIndividual IRI="#dopplerRadarModeLongitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#dopplerRadarMode"/>
+        <NamedIndividual IRI="#dopplerRadarModeVelocity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#dopplerRadarModeLatitude"/>
+        <NamedIndividual IRI="#latitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#dopplerRadarModeLongitude"/>
+        <NamedIndividual IRI="#longitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#dopplerRadarModeVelocity"/>
+        <NamedIndividual IRI="#velocity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#geolocationMode"/>
+        <NamedIndividual IRI="#geolocationModeLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#geolocationMode"/>
+        <NamedIndividual IRI="#geolocationModeLongitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#geolocationMode"/>
+        <NamedIndividual IRI="#geolocationModeVelocity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#geolocationModeLatitude"/>
+        <NamedIndividual IRI="#latitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#geolocationModeLongitude"/>
+        <NamedIndividual IRI="#longitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#geolocationModeVelocity"/>
+        <NamedIndividual IRI="#velocity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLongitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+        <NamedIndividual IRI="#georeferencedImagingModeWidth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLatitude"/>
+        <NamedIndividual IRI="#latitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLength"/>
+        <NamedIndividual IRI="#length"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLongitude"/>
+        <NamedIndividual IRI="#longitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#georeferencedImagingModeWidth"/>
+        <NamedIndividual IRI="#width"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisMode"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisMode"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeWaveformCharacterisation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisMode"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeWavelength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeType"/>
+        <NamedIndividual IRI="#type"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeWaveformCharacterisation"/>
+        <NamedIndividual IRI="#waveformCharacterisation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisModeWavelength"/>
+        <NamedIndividual IRI="#wavelength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#iffMode"/>
+        <NamedIndividual IRI="#iffModeIdentification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#iffModeIdentification"/>
+        <NamedIndividual IRI="#identification"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarMode"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarModeRadarCrossSection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarModeRadarCrossSection"/>
+        <NamedIndividual IRI="#radarCrossSection"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#lidarProfilingMode"/>
+        <NamedIndividual IRI="#lidarProfilingModeElevation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#lidarProfilingMode"/>
+        <NamedIndividual IRI="#lidarProfilingModeHeight"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#lidarProfilingModeElevation"/>
+        <NamedIndividual IRI="#elevation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#lidarProfilingModeHeight"/>
+        <NamedIndividual IRI="#height"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#objectClassificationMode"/>
+        <NamedIndividual IRI="#objectClassificationModeType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#objectClassificationMode"/>
+        <NamedIndividual IRI="#objectClassificationModeWavelength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#objectClassificationModeType"/>
+        <NamedIndividual IRI="#type"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#objectClassificationModeWavelength"/>
+        <NamedIndividual IRI="#wavelength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#observationAndMarkingMode"/>
+        <NamedIndividual IRI="#observationAndMarkingModeLength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#observationAndMarkingMode"/>
+        <NamedIndividual IRI="#observationAndMarkingModeType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#observationAndMarkingMode"/>
+        <NamedIndividual IRI="#observationAndMarkingModeWidth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#observationAndMarkingModeLength"/>
+        <NamedIndividual IRI="#length"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#observationAndMarkingModeType"/>
+        <NamedIndividual IRI="#type"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#observationAndMarkingModeWidth"/>
+        <NamedIndividual IRI="#width"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#sarImagingMode"/>
+        <NamedIndividual IRI="#sarImagingModeLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#sarImagingMode"/>
+        <NamedIndividual IRI="#sarImagingModeLength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#sarImagingMode"/>
+        <NamedIndividual IRI="#sarImagingModeLongitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#sarImagingMode"/>
+        <NamedIndividual IRI="#sarImagingModeWidth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#sarImagingModeLatitude"/>
+        <NamedIndividual IRI="#latitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#sarImagingModeLength"/>
+        <NamedIndividual IRI="#length"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#sarImagingModeLongitude"/>
+        <NamedIndividual IRI="#longitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#sarImagingModeWidth"/>
+        <NamedIndividual IRI="#width"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeHeight"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLength"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLongitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeWidth"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeHeight"/>
+        <NamedIndividual IRI="#height"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLatitude"/>
+        <NamedIndividual IRI="#latitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLength"/>
+        <NamedIndividual IRI="#length"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLongitude"/>
+        <NamedIndividual IRI="#longitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeWidth"/>
+        <NamedIndividual IRI="#width"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#targetTrackingMode"/>
+        <NamedIndividual IRI="#targetTrackingModeLatitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#targetTrackingMode"/>
+        <NamedIndividual IRI="#targetTrackingModeLongitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#observes"/>
+        <NamedIndividual IRI="#targetTrackingMode"/>
+        <NamedIndividual IRI="#targetTrackingModeVelocity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#targetTrackingModeLatitude"/>
+        <NamedIndividual IRI="#latitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#targetTrackingModeLongitude"/>
+        <NamedIndividual IRI="#longitude"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <NamedIndividual IRI="#targetTrackingModeVelocity"/>
+        <NamedIndividual IRI="#velocity"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#altimeterRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#altimeterRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#altimeterRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#altimeterRadarModeElevation"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#altitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#dimension"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#distance"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#dopplerRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#dopplerRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">50000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#dopplerRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#dopplerRadarModeLatitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#dopplerRadarModeLongitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#dopplerRadarModeVelocity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#elevation"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#geolocationMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#geolocationMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#geolocationMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#geolocationModeLatitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#geolocationModeLongitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#geolocationModeVelocity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">30.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#georeferencedImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLatitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLength"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#georeferencedImagingModeLongitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#georeferencedImagingModeWidth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#height"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#hyperspectralAnalysisMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#identification"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#iffMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#iffMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">400000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#iffMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">30.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">200000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#inverseSyntheticApertureRadarModeRadarCrossSection"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#latitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#length"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#lidarProfilingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#lidarProfilingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#lidarProfilingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#lidarProfilingModeElevation"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#lidarProfilingModeHeight"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#longitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#objectClassificationMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">15.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#observationAndMarkingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">15.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#observationAndMarkingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#observationAndMarkingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#observationAndMarkingModeLength"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#observationAndMarkingModeWidth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#radarCrossSection"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#sarImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">30.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#sarImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#sarImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#sarImagingModeLatitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#sarImagingModeLength"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#sarImagingModeLongitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#sarImagingModeWidth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">10.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#stereoscopicImagingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeHeight"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLatitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLength"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeLongitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#stereoscopicImagingModeWidth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#acquisitionTime"/>
+        <NamedIndividual IRI="#targetTrackingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#maxDistance"/>
+        <NamedIndividual IRI="#targetTrackingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100000.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#minDistance"/>
+        <NamedIndividual IRI="#targetTrackingMode"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">500.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#targetTrackingModeLatitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#targetTrackingModeLongitude"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">5.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#accuracy"/>
+        <NamedIndividual IRI="#targetTrackingModeVelocity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#type"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#velocity"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#waveformCharacterisation"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#wavelength"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#isEvolutive"/>
+        <NamedIndividual IRI="#width"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">false</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAcquisitionRange"/>
+        <ObjectProperty IRI="#hasMeasurementRange"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEmissionRange"/>
+        <ObjectProperty IRI="#hasMeasurementRange"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#observedBy"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSensor"/>
+    </InverseFunctionalObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasAcquisitionRange"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasCondition"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasEmissionRange"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasMeasurementRange"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasProperty"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasSensor"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#observedBy"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#observes"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <Class IRI="#SensorAttribute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCondition"/>
+        <Class IRI="#SensorMode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProperty"/>
+        <Class IRI="#SensorMode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSensor"/>
+        <Class IRI="#Platform"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#observes"/>
+        <Class IRI="#SensorMode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <Class IRI="#Attribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCondition"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSensor"/>
+        <Class IRI="#Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#observedBy"/>
+        <Class IRI="#SensorMode"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#observes"/>
+        <Class IRI="#SensorAttribute"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#height"/>
+        <DataProperty IRI="#dimension"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#length"/>
+        <DataProperty IRI="#dimension"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxDistance"/>
+        <DataProperty IRI="#distance"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxElevation"/>
+        <DataProperty IRI="#elevation"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxHeight"/>
+        <DataProperty IRI="#height"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxLatitude"/>
+        <DataProperty IRI="#latitude"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxLength"/>
+        <DataProperty IRI="#length"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxLongitude"/>
+        <DataProperty IRI="#longitude"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxRadarCrossSection"/>
+        <DataProperty IRI="#radarCrossSection"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxVelocity"/>
+        <DataProperty IRI="#velocity"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#maxWidth"/>
+        <DataProperty IRI="#width"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minDistance"/>
+        <DataProperty IRI="#distance"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minElevation"/>
+        <DataProperty IRI="#elevation"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minHeight"/>
+        <DataProperty IRI="#height"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minLatitude"/>
+        <DataProperty IRI="#latitude"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minLength"/>
+        <DataProperty IRI="#length"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minLongitude"/>
+        <DataProperty IRI="#longitude"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minRadarCrossSection"/>
+        <DataProperty IRI="#radarCrossSection"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minVelocity"/>
+        <DataProperty IRI="#velocity"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#minWidth"/>
+        <DataProperty IRI="#width"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#width"/>
+        <DataProperty IRI="#dimension"/>
+    </SubDataPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#isEvolutive"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#maxDistance"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#minDistance"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#accuracy"/>
+        <Class IRI="#SensorAttribute"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#acquisitionTime"/>
+        <Class IRI="#SensorMode"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isEvolutive"/>
+        <Class IRI="#Attribute"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#maxDistance"/>
+        <Class IRI="#SensorMode"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#minDistance"/>
+        <Class IRI="#SensorMode"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#accuracy"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#acquisitionTime"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#isEvolutive"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#maxDistance"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#minDistance"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Condition</IRI>
+        <Literal xml:lang="en">Condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Condition</IRI>
+        <Literal xml:lang="fr">Condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Platform</IRI>
+        <Literal xml:lang="en">Airborne platform</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Platform</IRI>
+        <Literal xml:lang="fr">Plateforme aéroportée</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Platform</IRI>
+        <Literal xml:lang="fr">Plateforme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Platform</IRI>
+        <Literal xml:lang="en">Platform</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sensor</IRI>
+        <Literal xml:lang="fr">Capteur</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sensor</IRI>
+        <Literal xml:lang="en">Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SensorAttribute</IRI>
+        <Literal xml:lang="fr">Attribut capteur</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SensorAttribute</IRI>
+        <Literal xml:lang="en">Sensor attribute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SensorMode</IRI>
+        <Literal xml:lang="en">Device that is able to sense information in its environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SensorMode</IRI>
+        <Literal xml:lang="fr">Dispositif capable de capter des informations dans son environnement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SensorMode</IRI>
+        <Literal xml:lang="fr">Mode capteur</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SensorMode</IRI>
+        <Literal xml:lang="en">Sensor mode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#acquisitionTime</IRI>
+        <Literal xml:lang="fr">temps</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#acquisitionTime</IRI>
+        <Literal xml:lang="en">time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#acronym</IRI>
+        <Literal xml:lang="en">acronym</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#acronym</IRI>
+        <Literal xml:lang="fr">sigle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#unit"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">meter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#unit"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="fr">metre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#unit"/>
+        <IRI>#distance</IRI>
+        <Literal xml:lang="en">meter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#unit"/>
+        <IRI>#distance</IRI>
+        <Literal xml:lang="fr">metre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#unit"/>
+        <IRI>#elevation</IRI>
+        <Literal xml:lang="en">meter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#unit"/>
+        <IRI>#elevation</IRI>
+        <Literal xml:lang="fr">metre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAcquisitionRange</IRI>
+        <Literal xml:lang="en">acquisition range</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAcquisitionRange</IRI>
+        <Literal xml:lang="fr">intervalle acquisition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAttribute</IRI>
+        <Literal xml:lang="fr">attribut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAttribute</IRI>
+        <Literal xml:lang="en">attribute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCondition</IRI>
+        <Literal xml:lang="en">condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCondition</IRI>
+        <Literal xml:lang="fr">condition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEmissionRange</IRI>
+        <Literal xml:lang="en">emission range</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasEmissionRange</IRI>
+        <Literal xml:lang="fr">intervalle emission</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMeasurementRange</IRI>
+        <Literal xml:lang="fr">intervalle de mesure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasMeasurementRange</IRI>
+        <Literal xml:lang="en">measurement range</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasProperty</IRI>
+        <Literal xml:lang="en">property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasProperty</IRI>
+        <Literal xml:lang="fr">propriété</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSensor</IRI>
+        <Literal xml:lang="fr">capteur</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasSensor</IRI>
+        <Literal xml:lang="en">sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#observedBy</IRI>
+        <Literal xml:lang="en">observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#observedBy</IRI>
+        <Literal xml:lang="fr">observation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#observes</IRI>
+        <Literal xml:lang="fr">observe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#observes</IRI>
+        <Literal xml:lang="en">observes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#unit"/>
+        <IRI>#radarCrossSection</IRI>
+        <Literal xml:lang="fr">metre carré</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#unit"/>
+        <IRI>#radarCrossSection</IRI>
+        <Literal xml:lang="en">square meter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#symbol</IRI>
+        <Literal xml:lang="en">symbol</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#symbol</IRI>
+        <Literal xml:lang="fr">symbole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#usesSensor</IRI>
+        <Literal xml:lang="en">uses sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#usesSensor</IRI>
+        <Literal xml:lang="fr">utilise le capteur</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

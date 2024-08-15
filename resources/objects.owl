@@ -1,0 +1,647 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="urn:absolute:/ontologies/objects"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="urn:absolute:/ontologies/objects">
+    <Prefix name="" IRI="urn:absolute:/ontologies/objects"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="sensor-network" IRI="urn:absolute:/ontologies/sensor-network#"/>
+    <Import>urn:absolute:/ontologies/sensor-network</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">First version of the objects ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="fr">Première version de l&apos;ontologie objets</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Aerial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AntiDroneTurret"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Building"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CaptureDrone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JammingTurret"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Status"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SurveillanceDrone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Terrestrial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Turret"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vehicle"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="sensor-network:Sensor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQuality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="sensor-network:radarCrossSection"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="sensor-network:wavelength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#test"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Aerial"/>
+        <ObjectUnionOf>
+            <Class IRI="#Drone"/>
+            <Class IRI="#Plane"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Drone"/>
+        <ObjectUnionOf>
+            <Class IRI="#CaptureDrone"/>
+            <Class IRI="#SurveillanceDrone"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Object"/>
+        <ObjectUnionOf>
+            <Class IRI="#Aerial"/>
+            <Class IRI="#Terrestrial"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Terrestrial"/>
+        <ObjectUnionOf>
+            <Class IRI="#Building"/>
+            <Class IRI="#Human"/>
+            <Class IRI="#Turret"/>
+            <Class IRI="#Vehicle"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Turret"/>
+        <ObjectUnionOf>
+            <Class IRI="#AntiDroneTurret"/>
+            <Class IRI="#JammingTurret"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Aerial"/>
+        <Class IRI="#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aerial"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxElevation"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">30000.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aerial"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minElevation"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AntiDroneTurret"/>
+        <Class IRI="#Turret"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AntiDroneTurret"/>
+        <DataMaxCardinality cardinality="0">
+            <DataProperty abbreviatedIRI="sensor-network:wavelength"/>
+        </DataMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <Class IRI="#Terrestrial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Building"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxVelocity"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaptureDrone"/>
+        <Class IRI="#Drone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaptureDrone"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxElevation"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">350.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaptureDrone"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.1</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CaptureDrone"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.03</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drone"/>
+        <Class IRI="#Aerial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Drone"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxHeight"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#Terrestrial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxHeight"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxLength"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxWidth"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">1.5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.5</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JammingTurret"/>
+        <Class IRI="#Turret"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minHeight"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minLength"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minVelocity"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minWidth"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plane"/>
+        <Class IRI="#Aerial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plane"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">100.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plane"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.001</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plane"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minWidth"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">2.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SurveillanceDrone"/>
+        <Class IRI="#Drone"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SurveillanceDrone"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxElevation"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">16000.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SurveillanceDrone"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.08</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SurveillanceDrone"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.02</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Terrestrial"/>
+        <Class IRI="#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Terrestrial"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxElevation"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Terrestrial"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minElevation"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Turret"/>
+        <Class IRI="#Terrestrial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Turret"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">8.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Turret"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxVelocity"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Turret"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vehicle"/>
+        <Class IRI="#Terrestrial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vehicle"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:maxRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">20.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vehicle"/>
+        <DataAllValuesFrom>
+            <DataProperty abbreviatedIRI="sensor-network:minRadarCrossSection"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:float"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">3.0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataAllValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComponent"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasQuality"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Aerial</IRI>
+        <Literal xml:lang="en">Object that can move or stay in the air</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Aerial</IRI>
+        <Literal xml:lang="fr">Objet pouvant se déplacer ou rester stationnaire dans les airs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Aerial</IRI>
+        <Literal xml:lang="en">Aerial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Aerial</IRI>
+        <Literal xml:lang="fr">Aérien</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Drone</IRI>
+        <Literal xml:lang="en">Drone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Drone</IRI>
+        <Literal xml:lang="fr">Drone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Object</IRI>
+        <Literal xml:lang="fr">Chose solide ayant unité et indépendance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Object</IRI>
+        <Literal xml:lang="en">Solid thing having unity and independence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Object</IRI>
+        <Literal xml:lang="en">Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Object</IRI>
+        <Literal xml:lang="fr">Objet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Status</IRI>
+        <Literal xml:lang="fr">Destination civile ou militaire d&apos;un objet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Status</IRI>
+        <Literal xml:lang="en">Military or civilian destination of an object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Status</IRI>
+        <Literal xml:lang="en">Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Status</IRI>
+        <Literal xml:lang="fr">Statut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Terrestrial</IRI>
+        <Literal xml:lang="en">Object that can move or stay on the ground</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Terrestrial</IRI>
+        <Literal xml:lang="fr">Objet pouvant se déplacer ou rester stationnaire sur la terre ferme</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Terrestrial</IRI>
+        <Literal xml:lang="fr">Terrestre</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Terrestrial</IRI>
+        <Literal xml:lang="en">Terrestrial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasComponent</IRI>
+        <Literal xml:lang="en">component</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasComponent</IRI>
+        <Literal xml:lang="fr">composant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasQuality</IRI>
+        <Literal xml:lang="en">quality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasQuality</IRI>
+        <Literal xml:lang="fr">qualité</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
