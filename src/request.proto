@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ibis;
+
+option java_multiple_files = true;
+option java_package = "com.thalesgroup.ibis.protos";
+
+// Message de tasking des capteurs
+message Request{
+    repeated string		sensor_mode_ids		= 1;    // Identifiants des modes capteurs
+    string				track_id			= 2;	// identifiant de la piste
+	int64				distance			= 3;	// Distance à la plateforme
+}

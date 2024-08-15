@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package ibis;
+
+option java_multiple_files = true;
+option java_package = "com.thalesgroup.ibis.protos";
+
+message Angle{
+	float angle									= 1;
+	float angle_uncertainty						= 2;
+}
+
+message Velocity{
+    float velocity                           	= 1; 	// Vitesse de la piste 
+    float velocity_uncertainty    				= 2; 	// Incertitude vitesse
+}
+
+message Distance{
+	float distance								= 1;    // Distance (m)
+	float distance_uncertainty					= 2;    // Incertitude distance
+}
+
+message Dimension{
+	float dimension								= 1;
+	float dimension_uncertainty					= 2;
+}
+
+message RadarCrossSection{
+	float radarCrossSection						= 1;
+	float radarCrossSection_uncertainty			= 2;
+}
+
+message Answer{
+// Identifiant piste (obligatoire)
+    string track_id                     		= 1;    // Nom de piste
+    string source_sensor_mode_id				= 2;    // Mode ayant obtenu l'information
+    int64 timestamp                   			= 3;    // Horodatage
+	int64 time_taken							= 4;	// Temps nécessaire à l'obtention de l'information
+	
+// Informations position (optionnel)
+	Angle latitude								= 5;	// Latitude (rad)
+	Angle longitude								= 6;	// Longitude (rad)
+	Distance elevation							= 7;	// Elevation (m)
+
+	Distance distance            				= 8;	// Distance (m)
+
+// Information identification (optionnel)
+	Dimension height							= 9;	// Dimension 1 (m)
+	Dimension length							= 10;	// Dimension 2 (m)
+	Dimension width								= 11;	// Dimension 3 (m)
+	
+	Velocity velocity							= 12;
+	RadarCrossSection radarCrossSection			= 13;
+
+    optional string object_type                 = 14;   // Type d'objet, Ex SA
+    optional string object_identification		= 15;   // Identification d'objet, Ex SA-11
+	optional string waveform_caracterisation	= 16;
+}
